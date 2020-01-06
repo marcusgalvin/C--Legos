@@ -45,6 +45,7 @@ namespace Bulldozer
     {
         public Kart()
         {
+        }
         public string manufacturer { get; set; }
     }
 
@@ -53,6 +54,7 @@ namespace Bulldozer
     {
         public Alien()
         {
+        }
         public string planet { get; set; }
     }
 
