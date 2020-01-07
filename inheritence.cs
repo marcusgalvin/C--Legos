@@ -1,5 +1,3 @@
-//this program uses inheritence in order to use the color and 'moves' properties located in GeneralObject inside all other classes
-
 using System;
 
 namespace Bulldozer
@@ -8,7 +6,13 @@ namespace Bulldozer
     {
         public static void Main(string[] args)
         {
-           
+            var Man = new Man();
+            var Kart = new Kart();
+            var Alien = new Alien();
+
+            
+
+
         }
     }
 
@@ -20,31 +24,45 @@ namespace Bulldozer
 
         }
         
-       
         public bool moves { get; set; }
         public string color { get; set; }
 
-
     }
 
-    //when you create a Man, it will first look at GeneralObject and steal all its properties and put it inside Man
-    public class Man : GeneralObject
-    {
-        public Man( )
+        public class Human : GeneralObject
         {
-            var Man = new Man();
-            var Kart = new Kart();
-            var Alien = new Alien();
-           
+             public Human()
+            {
+
+            }
+            public string name { get; set; }
         }
-        //everything that uses this blueprint can use the property color
-        public string name { get; set; }
-    }
+
+
+            //when you create a Man, it will first look at GeneralObject and steal all its properties and put it inside Man
+            public class Man : Human
+            {
+                public Man( )
+                {       
+        
+                }
+                //everything that uses this blueprint can use the property color
+            }
+
+
+            public class Women : Human
+            {
+                public Women()
+                {
+
+                }
+
 
     public class Kart : GeneralObject
     {
         public Kart()
         {
+
         }
         public string manufacturer { get; set; }
     }
@@ -54,6 +72,7 @@ namespace Bulldozer
     {
         public Alien()
         {
+
         }
         public string planet { get; set; }
     }
