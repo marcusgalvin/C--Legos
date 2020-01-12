@@ -1,4 +1,4 @@
-//encapsulation
+//encapsulation example
 using System;
 
 namespace Bulldozer
